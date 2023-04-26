@@ -1,6 +1,5 @@
 import { GatewayDispatchEvents, Client, API } from '@discordjs/core';
-import DiscordHelpers, { EmbedVariant } from '../Helpers/DiscordHelpers';
-import { ChannelType } from '../../node_modules/discord-api-types/payloads/v10/index';
+import { ChannelType } from 'discord-api-types/payloads/v10/index';
 import * as discord_api_types_v10 from 'discord-api-types/v10';
 import ConversationController from './ConversationController';
 import { GPT4All } from 'gpt4all';
@@ -14,14 +13,12 @@ class MessageController
 {
     private client: Client;
     private clientId: string;
-    private discordHelpers: DiscordHelpers;
     private conversationController: ConversationController;
     private openThreads: OpenThread[];
 
     constructor(client: Client, clientId: string) {
         this.client = client;
         this.clientId = clientId;
-        this.discordHelpers = new DiscordHelpers();
         this.conversationController = new ConversationController();
         this.openThreads = [];
     }

@@ -1,6 +1,6 @@
-# GPT4ALL Bot 
+# GPT4ALL Bot 🤖
 
-GPT4ALL Bot is a Discord bot which uses the GPT4ALL TS package to create conversations.
+GPT4ALL Bot is a Discord bot which uses the [GPT4ALL TS](https://github.com/nomic-ai/gpt4all-ts) package to create conversations.
 ## Installation
 
 1. Install all packages for GPT4ALL Bot with `npm i`.

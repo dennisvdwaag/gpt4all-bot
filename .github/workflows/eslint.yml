@@ -1,0 +1,23 @@
+on:
+  push:
+
+jobs:
+  test_job:
+    runs-on: ubuntu-latest
+    name: Run eslint
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          ref: ${{ github.head_ref }}
+      - run: |
+          git fetch --no-tags --depth=1 origin main
+          git checkout main 
+          git checkout ${{ github.head_ref }}
+      - name: Eslint Changeset Step
+        uses: esrimo/gh-action-eslint-changeset@v1
+        id: eslint-changeset
+        with:
+          main-branch: 'main'
+          file-extension: 'ts'

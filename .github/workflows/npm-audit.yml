@@ -1,0 +1,22 @@
+name: npm audit
+
+on:
+  push:
+  schedule:
+    - cron: '0 10 * * *'
+
+jobs:
+  scan:
+    name: Run npm audit
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install dependencies
+        run: npm ci
+      - uses: oke-py/npm-audit-action@v2
+        with:
+          audit_level: moderate
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          issue_assignees: oke-py
+          issue_labels: vulnerability,test
+          dedupe_issues: true

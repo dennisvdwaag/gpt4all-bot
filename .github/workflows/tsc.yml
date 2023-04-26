@@ -1,0 +1,17 @@
+on:
+  push:
+
+jobs:
+  tsc:
+    name: Run tsc
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: install node v19
+      uses: actions/setup-node@v1
+      with:
+        node-version: 19
+    - name: npm install
+      run: npm install
+    - name: tsc
+      uses: iCrawl/action-tsc@v1

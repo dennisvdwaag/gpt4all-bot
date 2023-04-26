@@ -40,7 +40,7 @@ class GPT4ALLBotController
     }
 
     async init() {
-        this.client.once(GatewayDispatchEvents.Ready, () => console.log('Týr is up and running!'));
+        this.client.once(GatewayDispatchEvents.Ready, () => console.log('GPT4ALL bot is up and running!'));
         this.messageController.listener();
         this.ws.connect();
     }

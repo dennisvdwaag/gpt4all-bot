@@ -4,7 +4,7 @@ import { REST } from 'discord.js';
 import dotenv from 'dotenv';
 import MessageController from './MessageController';
 
-class TyrController
+class GPT4ALLBotController
 {
     private client: Client;
     private ws: WebSocketManager;
@@ -46,4 +46,4 @@ class TyrController
     }
 }
 
-export default TyrController;
+export default GPT4ALLBotController;

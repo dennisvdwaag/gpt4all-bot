@@ -1,7 +1,7 @@
-import TyrController from './src/Controllers/TyrController';
+import GPT4ALLBotController from './src/Controllers/GPT4ALLBotController';
 import * as dotenv from 'dotenv';
 
 dotenv.config();
 
-const tyr = new TyrController(process.env.BOT_TOKEN, process.env.CLIENT_ID, process.env.VIKING_GUILD_ID);
-tyr.init();
+const GPT4ALLBot = new GPT4ALLBotController(process.env.BOT_TOKEN, process.env.CLIENT_ID);
+GPT4ALLBot.init();

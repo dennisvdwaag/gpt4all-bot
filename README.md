@@ -13,6 +13,13 @@ To run this project, you will need to add the following environment variables to
 - `CLIENT_ID`
 - `BOT_TOKEN`
 
+## TODO
+There's still a lot to do, I'll be updating this accordingly.
+
+#### Added 26-04-2023
+- Figure out how I can show complete prompts, cuts off sometimes
+- Configure GPT version in message
+
 ## Authors
 
 - [@dennisvdwaag](https://www.github.com/dennisvdwaag)

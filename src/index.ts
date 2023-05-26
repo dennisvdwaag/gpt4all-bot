@@ -1,4 +1,4 @@
-import GPT4ALLBotController from './src/Controllers/GPT4ALLBotController';
+import GPT4ALLBotController from './Controllers/GPT4ALLBotController';
 import * as dotenv from 'dotenv';
 
 dotenv.config();
